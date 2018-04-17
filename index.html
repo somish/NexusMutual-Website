@@ -1,0 +1,832 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>Nexus Mutual</title>
+    <link rel="icon" href="assets/img/nxm-favicon.gif" type="image/gif" sizes="16x16">
+
+    
+      <!-- <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'> -->
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/fonts/ProximaNova/fonts.min.css" />
+      <link href="assets/css/toolkit-startup.css" rel="stylesheet">
+      <link href="assets/css/application-startup.css" rel="stylesheet">
+      <link href="assets/css/custom.css" rel="stylesheet">
+    
+
+    
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      /* …curses ios, etc… */
+      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          width: 1px;
+          min-width: 100%;
+          *width: 100%;
+        }
+        #stage {
+          height: 1px;
+          overflow: auto;
+          min-height: 100vh;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+    </style>
+  </head>
+
+
+<body>
+  
+<a id="onTop" onclick="topFunction()" href="#stage" class="text-center" role="button" title="Go to top"><span class="icon icon-chevron-up"></span></a>
+
+
+<div class="stage-shelf stage-shelf-right hidden" id="sidebar">
+  <ul class="nav nav-bordered nav-stacked flex-column text-center">
+    <li class="nav-item">
+        <a class="nav-link" href="#overview" data-target="#stage" data-toggle="stage" data-distance="-250">Overview</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#technology" data-target="#stage" data-toggle="stage" data-distance="-250">Technology</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#team" data-target="#stage" data-toggle="stage" data-distance="-250">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="assets/docs/nmx_white_paperv1_4.pdf" target="_blank">Whitepaper</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-nav mt-2" href="" data-toggle="modal" data-target="#exampleModal">GET UPDATES</a>
+      </li>
+  </ul>
+</div>
+
+
+<div class="stage" id="stage">
+<div class="background-landing-topbar-4px"></div>
+<div class="block block-inverse block-fill-height app-header -background-landing">
+  <div id="nav-top" class="fixed-top app-navbar">
+    <div class="container">
+      <nav class="navbar navbar-transparent navbar-expand-md">
+        <a class="navbar-brand mr-auto" href="">
+          <img class="NXMLogo2" src="assets/img/NXMLogoWhite.png">
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-target="#stage"
+          data-toggle="stage"
+          data-distance="-250">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-none d-md-block text-uppercase">
+          <ul class="nav nav-bordered">
+            <li class="nav-item px-1 ">
+              <a class="nav-link" href="#Overview">Overview</a>
+            </li>
+            <li class="nav-item px-1 ">
+              <a class="nav-link" href="#technology">Technology</a>
+            </li>
+            <li class="nav-item px-1 ">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item px-1 ">
+              <a class="nav-link" href="assets/docs/nmx_white_paperv1_4.pdf" target="_blank">Whitepaper</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="btn btn-nav" href="" data-toggle="modal" data-target="#exampleModal" >GET UPDATES</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- <div class="container pb-4 fixed-top app-navbar">
+    <nav class="navbar navbar-transparent navbar-padded navbar-expand-md">
+      <a class="navbar-brand mr-auto" href="">
+        <img class="NXMLogo2" src="assets/img/NXMLogoWhite.png">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-target="#stage"
+        data-toggle="stage"
+        data-distance="-250">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="d-none d-md-block text-uppercase">
+        <ul class="nav nav-bordered">
+          <li class="nav-item px-1 ">
+            <a class="nav-link" href="#Overview">Overview</a>
+          </li>
+          <li class="nav-item px-1 ">
+            <a class="nav-link" href="#technology">Technology</a>
+          </li>
+          <li class="nav-item px-1 ">
+            <a class="nav-link" href="#team">Team</a>
+          </li>
+          <li class="nav-item px-1 ">
+            <a class="nav-link" href="">Whitepaper</a>
+          </li>
+          <li class="nav-item px-1 ">
+            <a class="btn btn-nav" href="">GET UPDATES</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div> -->
+
+  <!-- <img class="app-graph"  src="assets/img/startup-0.svg"> -->
+
+  <div class="block-xs-middle pb-5 py-xs-0 sm-pt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-lg-8 col-xl-6">
+          <p class="A-DECENTRALISED-ALTE mb-3">A DECENTRALISED ALTERNATIVE TO INSURANCE</p>
+          <h1 class="Smart-Contract-Cover mb-4">Smart Contract Cover</h1>
+          <p class="Building-an-open-com mb-4">Building an open community for smart contract cover.</p>
+          <button class="btn btn-border-dark" data-toggle="modal" data-target="#exampleModal">SIGN UP FOR UPDATES</button>
+          <button class="btn btn-fill ml-4 xs-d-none">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="top-span-bar-4px d-none xs-d-block" id="overview"></div>
+<div class="section block-p-relative xs-d-none" id="Overview">
+  <div class="container">
+    <div class="top-span" style="overflow: hidden;">
+      <div class="top-span-bar-4px"></div>
+      <div class="row app-align-center pt-5">
+        <div class="col-md-6 col-sm-5 d-none d-md-block sm-d-block" style="overflow: hidden;bottom: -20px;direction: rtl;" >
+          <img class="app-iphone" src="assets/img/1-share-risk.svg" style="width: 150%;">
+        </div>
+        <div class="col-md-6 col-sm-7 px-5">
+          <h2 style="opacity: 0.6;">SHARED RISK</h2>
+          <h1 class="mb-4">A blockchain insurance solution</h1>
+          <p class="p mb-4">Nexus Mutual uses the power of blockchain technology and Ethereum to allow people from all over the world to share insurance risk together. Without the need for an insurance company.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block d-none xs-d-block xs-text-center">
+  <div class="container">
+    <h2 class="d-none xs-d-block" style="opacity: 0.6;">SHARED RISK</h2>
+    <div class="row app-align-center pt-5">
+      <div class="col-sm-6 d-none d-md-block" style="overflow: hidden;bottom: -20px;direction: rtl;" >
+        <img class="app-iphone" src="assets/img/1-share-risk.svg" style="width: 150%;">
+      </div>
+      <div class="col-sm-6 d-none xs-d-block pb-5">
+        <img class="app-iphone" src="assets/img/1-share-risk.svg" style="width: 50vw;">
+      </div>
+      <div class="col-sm-6 px-5 px-xs-1">
+        <h2 class="xs-d-none" style="opacity: 0.6;">SHARED RISK</h2>
+        <h1 class="mb-4">A blockchain insurance solution</h1>
+        <p class="p mb-4">Nexus Mutual uses the power of blockchain technology and Ethereum to allow people from all over the world to share insurance risk together. Without the need for an insurance company.</p>
+        <!-- <ul class="nav nav-stacked flex-column black">
+          <li class="nav-item">
+              <a class="nav-link" href="#">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Technology</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Whitepaper</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-nav" href="">SIGN UP FOR UPDATES</a>
+            </li>
+        </ul> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="top-span-bar-4px d-none xs-d-block"></div>
+<div class="block block-secondary xs-text-center">
+  <div class="container">
+    <div class="row app-align-center sm-align-center">
+      <div class="col-sm-6 d-none xs-d-block pb-5">
+        <img class="app-iphone" src="assets/img/2-smart-contract-cover.svg" style="width: 50vw;">
+      </div>
+      <div class="col-md-6 col-sm-7 px-5 sm-px-0 px-xs-1">
+        <h1 class="mb-4">Smart Contract Cover</h1>
+        <p class="p">Secure risk and potential bugs in smart contract code. Be covered for events like The DAO hack or Parity multi-sig wallet issues.</p>
+        <p class="p mb-4">Nexus Mutual will provide a fixed claims pay-out if a smart contract is hacked.
+        </p>
+        <a class="btn btn-border" href="assets/docs/nmx_white_paperv1_4.pdf" target="_blank">WHITEPAPER</a>
+      </div>
+      <div class="col-md-6 col-sm-5 d-none d-md-block sm-d-block">
+        <img style="width: 100%" class="app-iphone" src="assets/img/2-smart-contract-cover.svg">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block block-secondary xs-text-center">
+  <div class="container">
+    <div class="row app-align-center sm-align-center">
+      <div class="col-md-6 col-sm-5 d-none d-md-block sm-d-block">
+        <img style="width: 100%" class="app-iphone" src="assets/img/3-replace-insurance.svg">
+      </div>
+      <div class="col-sm-6 d-none xs-d-block pb-5">
+        <img class="app-iphone" src="assets/img/3-replace-insurance.svg" style="width: 50vw;">
+      </div>
+      <div class="col-md-6 col-sm-7 px-5 sm-px-0 px-xs-1">
+        <h1 class="mb-4">Mutuals to replace insurance</h1>
+        <p class="p">We are building an alternative risk carrier for the insurance industry.</p>
+        <p class="p mb-4">In the future we plan to offer more standard products, like earthquake cover, which can be seen in our alpha demo.
+        </p>
+        <button class="btn btn-border-secondary">ALPHA DEMO</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block block-secondary video-section xs-text-center sm-text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-7 col-lg-12 col-md-12">
+        <div class="row app-align-center">
+          <div class="col-xl-12 col-lg-6 col-md-6">
+            <div class="top-span-bar-4px"></div>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-xl-12 col-lg-6 col-md-6 md-text-center">
+            <div class="row mt-4 md-mt-0 app-align-center">
+              <div class="col-xl-2 col-12-2 col-md-12">
+                <img class="team-hugh">
+              </div>
+              <div class="col-xl-10 col-lg-12 col-md-12">
+                <h2 class="mb-3 pt-xs-1 sm-pt-1 md-pt-1" style="opacity: 0.6;">HUGH KARP | FOUNDER &amp; INSURANCE PROFESSIONAL</h2>
+                <h1>Introducing Nexus Mutual at EthCC</h1>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-5 col-lg-5 xs-pt-50 sm-pt-50 md-d-none">
+        <div class="top-span-bar-4px"></div>
+        <!-- <img style="width: 100%" src="assets/img/code.jpg"> -->
+        <pre class="code">
+          function measure() {
+        var scrollTop = $window.scrollTop()
+        var distance =  Math.max(scrollTop - cache.containerTop, 0)
+        if (!distance) {
+          $($toc.find('li a')[1]).addClass('active')
+          return $toc.css({
+            position: '',
+            left: '',
+            top: ''
+          })
+        }
+        $toc.css({
+          position: 'fixed',
+          left: cache.containerRight,
+          top: 0
+        })
+      }
+
+      updateCache()
+      </pre>
+      <div class="row mt-4 app-align-center">
+        <div class="col-md-3">
+          <img class="team-ish">
+        </div>
+        <div class="col-md-9">
+          <h2 class="mb-3 pt-xs-1 sm-pt-1" style="opacity: 0.6;">ISH GOEL | CTO</h2>
+          <h1>See our code on Github</h1>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-12 d-none md-d-block md-pt-50">
+        <div class="row app-align-center">
+          <div class="col-md-6 md-text-center">
+            <div class="row app-align-center">
+              <div class="col-md-12">
+                <img class="team-ish">
+              </div>
+              <div class="col-md-12">
+                <h2 class="mb-3 md-pt-1" style="opacity: 0.6;">ISH GOEL | CTO</h2>
+                <h1>See our code on Github</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="top-span-bar-4px"></div>
+            <pre class="code">
+              function measure() {
+              var scrollTop = $window.scrollTop()
+              var distance =  Math.max(scrollTop - cache.containerTop, 0)
+              if (!distance) {
+                $($toc.find('li a')[1]).addClass('active')
+                return $toc.css({
+                  position: '',
+                  left: '',
+                  top: ''
+                })
+              }
+              $toc.css({
+                position: 'fixed',
+                left: cache.containerRight,
+                top: 0
+              })
+            }
+
+            updateCache()
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="top-span-bar-4px"></div>
+<div class="section block block-inverse block-secondary bg-dark" id="technology">
+  <div class="container">
+    <div class="row app-align-center">
+      <div class="col-md-7">
+        <h2 style="opacity: 0.6;">RUN BY MEMBERS</h2>
+        <h1 class="mb-4">Community Driven</h1>
+        <p class="p-dark mb-4">No insurance company. Nexus Mutual is run entirely by its members. Only members can decide which claims are valid. All member decisions are recorded and enforced by smart contracts on the Ethereum public blockchain.</p>
+        <a class="btn btn-border-dark d-none xs-d-block sm-d-block" href="assets/docs/nmx_white_paperv1_4.pdf" target="_blank">WHITEPAPER</a>
+      </div>
+      <div class="col-md-5 text-center xs-d-none sm-d-none">
+        <a class="btn btn-border-dark" href="assets/docs/nmx_white_paperv1_4.pdf" target="_blank">WHITEPAPER</a>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5 pt-5 xs-d-none sm-d-none" id="tabs">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <nav>
+          <div class="nav nav-tabs nav-fill text-tab" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="discretionary-cover-tab" data-toggle="tab" href="#discretionary-cover" role="tab" aria-controls="discretionary-cover" aria-selected="true"><li>
+              <div class="circle"><span class="slider"></span><span class="slider-full"></span><!-- <div class="border-full"></div> --></div>
+              <div>DISCRETIONARY COVER</div></li></a>
+            <a class="nav-item nav-link" id="legal-backing-tab" data-toggle="tab" href="#legal-backing" role="tab" aria-controls="legal-backing" aria-selected="false"><li><div class="circle"><span class="slider"></span></div>
+              <div>LEGAL BACKING</div></li></a>
+            <a class="nav-item nav-link" id="membership-tab" data-toggle="tab" href="#membership" role="tab" aria-controls="membership" aria-selected="false"><li><div class="circle"><span class="slider"></span></div>
+              <div>MEMBERSHIP</div></li></a>
+          </div>
+        </nav>
+        <div class="tab-content mt-5 py-5 px-3 px-sm-0" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="discretionary-cover" role="tabpanel" aria-labelledby="discretionary-cover-tab">
+            <div class="row app-align-center">
+              <div class="col-md-5">
+                <p class="p-dark mb-4">Smart Contract Cover will not be a contract of insurance. Fellow members will decide on claims. Claim payments will be enforced by token driven economic incentives rather than placing trust in an insurance company.</p>
+                <button class="btn btn-border-dark">LEARN MORE</button>
+              </div>
+              <div class="col-md-7 px-5">
+                <img class="technology-image" src="assets/img/discretionary-cover.svg">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="legal-backing" role="tabpanel" aria-labelledby="nlegal-backing-tab">
+            <div class="row app-align-center">
+              <div class="col-md-5">
+                <p class="p-dark mb-4">When joining the mutual you will become a legal member of a UK company. Your membership rights will be backed by legal agreements. All members will have legal rights to the pool of funds.</p>
+                <button class="btn btn-border-dark">LEARN MORE</button>
+              </div>
+              <div class="col-md-7 px-5">
+                <img class="technology-image" src="assets/img/legal-backing.svg">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="membership" role="tabpanel" aria-labelledby="membership-tab">
+            <div class="row app-align-center">
+              <div class="col-md-5">
+                <p class="p-dark mb-4">Membership rights will be represented by tokens. Tokens can be used to purchase cover as well as participate in claims assessment, underwriting and governance. All funds raised from token purchases belong to members.</p>
+                <button class="btn btn-border-dark">LEARN MORE</button>
+              </div>
+              <div class="col-md-7 px-5">
+                <img class="technology-image" src="assets/img/membership.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5 pt-5 d-none xs-d-block sm-d-block">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row app-align-center">
+            <div class="col-sm-12 col-12">
+              <h2 style="opacity: 0.6;">DISCRETIONARY COVER</h2>
+              <p class="p-dark mb-4 mt-4">Smart Contract Cover will not be a contract of insurance. Fellow members will decide on claims. Claim payments will be enforced by token driven economic incentives rather than placing trust in an insurance company.</p>
+              <button class="btn btn-border-dark">LEARN MORE</button>
+            </div>
+            <div class="col-sm-8 offset-sm-2 col-12 text-center mt-4">
+              <img class="xs-technology-image" src="assets/img/discretionary-cover.svg">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row app-align-center">
+            <div class="col-12">
+              <h2 style="opacity: 0.6;">LEGAL BACKING</h2>
+              <p class="p-dark mb-4 mt-4">When joining the mutual you will become a legal member of a UK company. Your membership rights will be backed by legal agreements. All members will have legal rights to the pool of funds.</p>
+              <button class="btn btn-border-dark">LEARN MORE</button>
+            </div>
+            <div class="col-12 text-center mt-4">
+              <img class="xs-technology-image" src="assets/img/legal-backing.svg">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row app-align-center">
+            <div class="col-12">
+              <h2 style="opacity: 0.6;">MEMBERSHIP</h2>
+              <p class="p-dark mb-4 mt-4">Membership rights will be represented by tokens. Tokens can be used to purchase cover as well as participate in claims assessment, underwriting and governance. All funds raised from token purchases belong to members.</p>
+              <button class="btn btn-border-dark">LEARN MORE</button>
+            </div>
+            <div class="col-12 text-center mt-4">
+              <img class="xs-technology-image" src="assets/img/membership.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <ol class="carousel-indicators mt-5" style="position: unset;">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="top-span-bar-4px"></div>
+<div  class="block block-secondary d-none xs-d-block sm-d-block text-center" id="team-section">
+  <div class="container">
+    <h2 style="opacity: 0.6;">MEMBERSHIP OPENS LATE 2018</h2>
+    <h1 class="mb-5">Join Our Community</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner mb-3">
+        <div class="carousel-item active">
+          <div class="row sm-align-center">
+            <div class="col-sm-4">
+              <img class="team-img team-hugh">
+            </div>
+            <div class="col-sm-8 sm-text-left">
+              <h2 class="team-name mt-3">Hugh Karp</h2>
+              <h2>FOUNDER &amp; INSURANCE PROFESSIONAL</h2>
+              <p class="p py-3">Insurance professional and actuary with 15 years of experience in a broad range of insurance and reinsurance roles including CFO of UK Life operations for a global reinsurer. Blockchain enthusiast since 2011.</p>
+              <ul class="social-icons">
+                <li><a class="team-icon team-twitter" href="https://twitter.com/HughKarp" target="_blank"></a></li>
+                <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/hughkarp/" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row sm-align-center">
+            <div class="col-sm-4">
+              <img class="team-img team-ish">
+            </div>
+            <div class="col-sm-8 sm-text-left">
+              <h2 class="team-name mt-3">Ish Goel</h2>
+              <h2>CTO</h2>
+              <p class="p py-3">CEO and key blockchain architect at Somish Solutions. Established blockchain centre of excellence in 2016. Overseen development of several blockchain MVP’s across several industries and government.</p>
+              <ul class="social-icons">
+                <li><a class="team-icon team-twitter" href="https://twitter.com/ishgoel" target="_blank"></a></li>
+                <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/ishgoel/" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row sm-align-center">
+            <div class="col-sm-4">
+              <img class="team-img team-nitika">
+            </div>
+            <div class="col-sm-8 sm-text-left">
+              <h2 class="team-name mt-3">Nitika Arora</h2>
+              <h2>LEAD DEVELOPER</h2>
+              <p class="p py-3">Full stack developer and lead technology architect at Somish Solutions. Focussed on technology design, enterprise scalability and security. Team lead for Ethereum based projects.</p>
+              <ul class="social-icons">
+                <li><a class="team-icon team-github" href="https://github.com/nitika-goel" target="_blank"></a></li>
+                <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/nitika-arora-79991836/" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row sm-align-center">
+            <div class="col-sm-4">
+              <img class="team-img team-james">
+            </div>
+            <div class="col-sm-8 sm-text-left">
+              <h2 class="team-name mt-3">James Suddaby</h2>
+              <h2>COO</h2>
+              <p class="p py-3">Start-up Operations Lead with over 20 years of experience focused on emerging technology solutions across multiple markets. Working full-time delivering projects built on distributed ledgers since 2013.</p>
+              <ul class="social-icons">
+                <li><a class="team-icon team-twitter" href="https://twitter.com/jamessuddaby" target="_blank"></a></li>
+                <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/jamessuddaby/" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row sm-align-center">
+            <div class="col-sm-4">
+              <img class="team-img team-steve">
+            </div>
+            <div class="col-sm-8 sm-text-left">
+              <h2 class="team-name mt-3">Steve Barker</h2>
+              <h2>ADVISOR</h2>
+              <p class="p py-3">Founder and CEO of SwapForex. Over 22 years’ experience in financial services and start-ups. Managed the launch of numerous UK and international Investment funds. Co-founded numerous start-ups in media, internet TV and financial services.</p>
+              <ul class="social-icons">
+                <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/barkersteven/" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row sm-align-center">
+            <div class="col-sm-4">
+              <img class="team-img team-evan">
+            </div>
+            <div class="col-sm-8 sm-text-left">
+              <h2 class="team-name mt-3">Evan van Ness</h2>
+              <h2>ADVISOR</h2>
+              <p class="p py-3">Founder of <a href="http://www.weekinethereum.com/" target="_blank">WeekInEthereum.com</a><br>
+              It's time to decentralise the Internet.
+              </p>
+              <ul class="social-icons">
+                <li><a class="team-icon team-twitter" href="https://twitter.com/evan_van_ness" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-border px-1 py-1 mx-3" href="#carouselExampleControls" role="button" data-slide="prev" style="font-size: 25px; line-height: 0">
+        <span class="icon icon-triangle-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="btn btn-border px-1 py-1 mx-3" href="#carouselExampleControls" role="button" data-slide="next" style="font-size: 25px; line-height: 0">
+        <span class="icon icon-triangle-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="section block block-secondary xs-d-none sm-d-none" id="team">
+  <div class="container">
+    <h2 style="opacity: 0.6;">MEMBERSHIP OPENS LATE 2018</h2>
+    <h1 class="mb-4">Join Our Community</h1>
+      <div class="row app-align-center mt-4 pt-4">
+        <div class="col-md-6">
+          <nav>
+            <div class="row nav nav-tabs nav-fill text-tab" role="tablist" id="nav-tab">
+                <a class="col-xl-4 col-lg-5 col-md-6 nav-item nav-link active py-3" id="hugh-tab" data-toggle="tab" href="#team-text-hugh" role="tab" aria-controls="team-text-hugh" aria-selected="true"><img class="team-img team-hugh"></a>
+                <a class="col-xl-4 col-lg-5 col-md-6 nav-item nav-link py-3" id="ish-tab" data-toggle="tab" href="#team-text-ish" role="tab" aria-controls="team-text-ish" aria-selected="false"><img class="team-img team-ish"></a>
+                <a class="col-xl-4 col-lg-5 col-md-6 nav-item nav-link py-3" id="nitika-tab" data-toggle="tab" href="#team-text-nitika" role="tab" aria-controls="team-text-nitika" aria-selected="false"><img class="team-img team-nitika"></a>
+                <a class="col-xl-4 col-lg-5 col-md-6 nav-item nav-link py-3" id="james-tab" data-toggle="tab" href="#team-text-james" role="tab" aria-controls="team-text-james" aria-selected="true"><img class="team-img team-james"></a>
+                <a class="col-xl-4 col-lg-5 col-md-6 nav-item nav-link py-3" id="steve-tab" data-toggle="tab" href="#team-text-steve" role="tab" aria-controls="team-text-steve" aria-selected="false"><img class="team-img team-steve"></a>
+                <a class="col-xl-4 col-lg-5 col-md-6 nav-item nav-link py-3" id="evan-tab" data-toggle="tab" href="#team-text-evan" role="tab" aria-controls="team-text-evan" aria-selected="false"><img class="team-img team-evan"></a>
+            </div>
+          </nav>
+        </div>
+        <div class="col-sm-6 tab-content mt-5 py-5 px-5"  id="nav-tabContent">
+          <div  class="tab-pane fade show active" id="team-text-hugh" role="tabpanel" aria-labelledby="hugh-tab">
+            <h2 class="team-name">Hugh Karp</h2>
+            <h2>FOUNDER &amp; INSURANCE PROFESSIONAL</h2>
+            <p class="p py-3">Insurance professional and actuary with 15 years of experience in a broad range of insurance and reinsurance roles including CFO of UK Life operations for a global reinsurer. Blockchain enthusiast since 2011.</p>
+            <ul class="social-icons">
+              <li><a class="team-icon team-twitter" href="https://twitter.com/HughKarp" target="_blank"></a></li>
+              <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/hughkarp/" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div  class="tab-pane fade" id="team-text-ish" role="tabpanel" aria-labelledby="ish-tab">
+            <h2 class="team-name">Ish Goel</h2>
+            <h2>CTO</h2>
+            <p class="p py-3">CEO and key blockchain architect at Somish Solutions. Established blockchain centre of excellence in 2016. Overseen development of several blockchain MVP’s across several industries and government.</p>
+            <ul class="social-icons">
+              <li><a class="team-icon team-twitter" href="https://twitter.com/ishgoel" target="_blank"></a></li>
+              <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/ishgoel/" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div  class="tab-pane fade" id="team-text-nitika" role="tabpanel" aria-labelledby="nitika-tab">
+            <h2 class="team-name">Nitika Arora</h2>
+            <h2>LEAD DEVELOPER</h2>
+            <p class="p py-3">Full stack developer and lead technology architect at Somish Solutions. Focussed on technology design, enterprise scalability and security. Team lead for Ethereum based projects.</p>
+            <ul class="social-icons">
+              <li><a class="team-icon team-github" href="https://github.com/nitika-goel" target="_blank"></a></li>
+              <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/nitika-arora-79991836/" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div  class="tab-pane fade" id="team-text-james" role="tabpanel" aria-labelledby="james-tab">
+            <h2 class="team-name">James Suddaby</h2>
+            <h2>COO</h2>
+            <p class="p py-3">Start-up Operations Lead with over 20 years of experience focused on emerging technology solutions across multiple markets. Working full-time delivering projects built on distributed ledgers since 2013.</p>
+            <ul class="social-icons">
+              <li><a class="team-icon team-twitter" href="https://twitter.com/jamessuddaby" target="_blank"></a></li>
+              <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/jamessuddaby/" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div  class="tab-pane fade" id="team-text-steve" role="tabpanel" aria-labelledby="steve-tab">
+            <h2 class="team-name">Steve Barker</h2>
+            <h2>ADVISOR</h2>
+            <p class="p py-3">Founder and CEO of SwapForex. Over 22 years’ experience in financial services and start-ups. Managed the launch of numerous UK and international Investment funds. Co-founded numerous start-ups in media, internet TV and financial services.</p>
+            <ul class="social-icons">
+              <li><a class="team-icon team-linkedin" href="https://www.linkedin.com/in/barkersteven/" target="_blank"></a></li>
+            </ul>
+          </div>
+          <div  class="tab-pane fade" id="team-text-evan" role="tabpanel" aria-labelledby="evan-tab">
+            <h2 class="team-name">Evan van Ness</h2>
+            <h2>ADVISOR</h2>
+            <p class="p py-3">Founder of <a href="http://www.weekinethereum.com/" target="_blank">WeekInEthereum.com</a><br>
+            It's time to decentralise the Internet.
+            </p>
+            <ul class="social-icons">
+              <li><a class="team-icon team-twitter" href="https://twitter.com/evan_van_ness" target="_blank"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="block block-inverse block-secondary bg-dark">
+  <div class="container">
+    <div class="row app-align-center">
+      <div class="col-md-6">
+        <h1 class="mb-4">Be first</h1>
+        <p class="p-dark mb-4">Stay tuned for the latest development updates. Sign up to our newsletter.</p>
+        <p class="p-dark mb-4">Membership of the mutual will be represented by “NXM” tokens. By signing up, you’ll be the first to know when we launch.</p>
+      </div>
+      <div class="col-md-6 px-5 sm-px-1 md-px-1 xs-d-none">
+        <p class="signedup mb-3 d-none">Thank you! You're signed up.</p>
+        <form class="form-inline d-flex xs-d-block">
+          <input class="form-control form-control-border mb-3" placeholder="your@email.com">
+          <button class="btn btn-fill mb-3 mx-2 md-mx-0">GET UPDATES</button>
+        </form>
+        <ul class="social-icons">
+          <li><a class="dark-icon icon-github-dark" href="https://github.com/somish/NexusMutual" target="_blank"></a></li>
+          <li><a class="dark-icon icon-medium-dark" href="https://medium.com/nexus-mutual" target="_blank"></a></li>
+          <li><a class="dark-icon icon-twitter-dark" href="https://twitter.com/NexusMutual" target="_blank"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 d-none xs-d-block">
+        <form class="form-inline d-flex xs-d-block">
+          <input class="form-control form-control-border mb-3" placeholder="your@email.com">
+          <button class="btn btn-fill mb-3">GET UPDATES</button>
+        </form>
+        <ul class="social-icons">
+          <li><a class="dark-icon icon-github-dark" href="https://github.com/somish/NexusMutual" target="_blank"></a></li>
+          <li><a class="dark-icon icon-medium-dark" href="https://medium.com/nexus-mutual" target="_blank"></a></li>
+          <li><a class="dark-icon icon-twitter-dark" href="https://twitter.com/NexusMutual" target="_blank"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="app-footer" style="background-color: #1eab89">
+  <div class="container">
+    <nav class="navbar py-0 navbar-expand-md">
+      <a class="navbar-brand mr-auto" href="">
+        <img class="NXMLogo2" src="assets/img/NXMLogoWhite.png">
+      </a>
+      <div class="d-none d-md-block text-uppercase">
+        <ul class="nav nav-bordered">
+          <li class="nav-item px-1 ">
+            <a class="nav-link" href="#technology">Technology</a>
+          </li>
+          <li class="nav-item px-1 ">
+            <a class="nav-link" href="#team">About/Team</a>
+          </li>
+          <li class="nav-item px-1 ">
+            <a class="nav-link" href="assets/docs/nmx_white_paperv1_4.pdf" target="_blank">Whitepaper</a>
+          </li>
+          <li class="nav-item px-1 ">
+            <a class="nav-link" href="">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control form-control-border" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your@email.com" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-fill">GET UPDATES</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/toolkit.js"></script>
+<script src="assets/js/application.js"></script>
+<script src="assets/js/smooth-scroll.js"></script>
+<script src="assets/js/carousel-swipe.js"></script>
+<script>
+  // execute/clear BS loaders for docs
+  $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+</script>
+<script>
+  $('.carousel').carousel({
+      interval: false
+    })
+</script>
+<script>
+  $("#carouselExampleControls").carousel({
+  swipe: 30
+});
+</script>
+<script>
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      // document.getElementById("onTop").style.display = "block";
+      $("#onTop").fadeIn();
+    }
+    else
+    {
+      // document.getElementById("onTop").style.display = "none";
+      $("#onTop").fadeOut();
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  // function topFunction() {
+  //     document.body.scrollTop = 0;
+  //     document.documentElement.scrollTop = 0;
+  // }
+</script>
+<script>
+  $(document).ready(function(){
+    $('ul li a').click(function(){
+      $('li a').removeClass("active");
+      $(this).addClass("active");
+    });
+  });
+</script>
+<script>
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 && $(window).width() > 1024) {
+      $("#nav-top").removeClass("app-navbar");
+      $("#nav-top").addClass("after-scroll");
+    }
+    else
+    {
+      $("#nav-top").addClass("app-navbar");
+      $("#nav-top").removeClass("after-scroll");
+    }
+  }
+</script>
+<script>
+  var sections = $('.section')
+  , nav = $('#nav-top')
+  , nav_height = nav.outerHeight();
+ 
+  $(window).on('scroll', function () {
+    var cur_pos = $(this).scrollTop();
+   
+    sections.each(function() {
+      var top = $(this).offset().top - nav_height,
+          bottom = top + $(this).outerHeight();
+   
+      if (cur_pos >= top && cur_pos <= bottom) {
+        nav.find('a').removeClass('active');
+        nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
