@@ -43,6 +43,7 @@
         }
       }
     </style>
+
   </head>
 
 
@@ -671,11 +672,38 @@
         <p class="p-dark mb-4">Membership of the mutual will be represented by “NXM” tokens. By signing up, you’ll be the first to know when we launch.</p>
       </div>
       <div class="col-md-6 px-5 sm-px-1 md-px-1 xs-d-none">
-        <p class="signedup mb-3 d-none">Thank you! You're signed up.</p>
+        <!--<p class="signedup mb-3 d-none">Thank you! You're signed up.</p>
         <form class="form-inline d-flex xs-d-block">
-          <input class="form-control form-control-border mb-3" placeholder="your@email.com">
-          <button class="btn btn-fill mb-3 mx-2 md-mx-0">GET UPDATES</button>
-        </form>
+          <input class="form-control form-control-border mb-3" id="request-email" placeholder="your@email.com">
+          <a class="btn btn-fill mb-3 mx-2 md-mx-0" onclick="requestPreview()" >GET UPDATES</a>
+        </form>-->
+        <div id="sib_embed_signup" class="BeFirstForm">
+          <div class="forms-builder-wrapper" style="position:relative;margin-left: auto;margin-right: auto;">
+            <input type="hidden" id="sib_embed_signup_lang" value="en">
+            <input type="hidden" id="sib_embed_invalid_email_message" value="That email address is not valid. Please try again.">
+            <input type="hidden" name="primary_type" id="primary_type" value="email">
+            <div id="sib_loading_gif_area" style="position: absolute;z-index: 9999;display: none;">
+                <img src="https://my.sendinblue.com/public/theme/version4/assets/images/loader_sblue.gif" style="display: block;margin-left: auto;margin-right: auto;position: relative;top: 40%;">
+            </div>
+            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/37v37/id/1" onsubmit="return false;">
+              <input type="hidden" name="js_id" id="js_id" value="37v37">
+              <input type="hidden" name="listid" id="listid" value="2">
+              <input type="hidden" name="from_url" id="from_url" value="yes">
+              <input type="hidden" name="hdn_email_txt" id="hdn_email_txt" value="">
+              <div class="sib-container rounded">
+                <input type="hidden" name="req_hid" id="req_hid" value="" style="font-size: 13px;">
+                <div class="view-messages" style=" margin:5px 0;"> </div> <!-- an email as primary -->
+                <div class="primary-group email-group forms-builder-group ui-sortable">
+                  <div class="row mandatory-email form-inline d-flex" style="margin: auto 0">
+                    <input type="text" name="email" id="email" value="" class="form-control form-control-border mb-3" placeholder="your@email.com">
+                    <button class="btn btn-fill mb-3 mx-2 md-mx-0" type="submit" data-editfield="subscribe" >Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--<iframe width="540" height="193" src="https://my.sendinblue.com/users/subscribe/js_id/37v37/id/1" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>-->
         <ul class="social-icons">
           <li><a class="dark-icon icon-github-dark" href="https://github.com/somish/NexusMutual" target="_blank"></a></li>
           <li><a class="dark-icon icon-medium-dark" href="https://medium.com/nexus-mutual" target="_blank"></a></li>
@@ -683,10 +711,36 @@
         </ul>
       </div>
       <div class="col-md-6 d-none xs-d-block">
-        <form class="form-inline d-flex xs-d-block">
+        <!--<form class="form-inline d-flex xs-d-block">
           <input class="form-control form-control-border mb-3" placeholder="your@email.com">
           <button class="btn btn-fill mb-3">GET UPDATES</button>
-        </form>
+        </form>-->
+        <div id="sib_embed_signup" class="BeFirstForm">
+          <div class="forms-builder-wrapper" style="position:relative;margin-left: auto;margin-right: auto;">
+            <input type="hidden" id="sib_embed_signup_lang" value="en">
+            <input type="hidden" id="sib_embed_invalid_email_message" value="That email address is not valid. Please try again.">
+            <input type="hidden" name="primary_type" id="primary_type" value="email">
+            <div id="sib_loading_gif_area" style="position: absolute;z-index: 9999;display: none;">
+                <img src="https://my.sendinblue.com/public/theme/version4/assets/images/loader_sblue.gif" style="display: block;margin-left: auto;margin-right: auto;position: relative;top: 40%;">
+            </div>
+            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/37v37/id/1" onsubmit="return false;">
+              <input type="hidden" name="js_id" id="js_id" value="37v37">
+              <input type="hidden" name="listid" id="listid" value="2">
+              <input type="hidden" name="from_url" id="from_url" value="yes">
+              <input type="hidden" name="hdn_email_txt" id="hdn_email_txt" value="">
+              <div class="sib-container rounded">
+                <input type="hidden" name="req_hid" id="req_hid" value="" style="font-size: 13px;">
+                <!--<div class="view-messages" style=" margin:5px 0;"> </div>-->
+                <div class="primary-group email-group forms-builder-group ui-sortable">
+                  <div class="row mandatory-email form-inline d-flex xs-d-block" style="margin: auto 0">
+                    <input type="text" name="email" id="email" value="" class="form-control form-control-border mb-3" placeholder="your@email.com">
+                    <button class="btn btn-fill mb-3" type="submit" data-editfield="subscribe" >Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
         <ul class="social-icons">
           <li><a class="dark-icon icon-github-dark" href="https://github.com/somish/NexusMutual" target="_blank"></a></li>
           <li><a class="dark-icon icon-medium-dark" href="https://medium.com/nexus-mutual" target="_blank"></a></li>
@@ -721,6 +775,7 @@
     </nav>
   </div>
 </div>
+</div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -731,20 +786,55 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <!--<form>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control form-control-border" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your@email.com" required>
+            <input type="email" class="form-control form-control-border" id="request-email" aria-describedby="emailHelp" placeholder="your@email.com" required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
-        </form>
+        </form>-->
+
+
+        <div id="sib_embed_signup" style="padding: 10px;">
+          <div class="forms-builder-wrapper" style="position:relative;margin-left: auto;margin-right: auto;">
+            <input type="hidden" id="sib_embed_signup_lang" value="en">
+            <input type="hidden" id="sib_embed_invalid_email_message" value="That email address is not valid. Please try again.">
+            <input type="hidden" name="primary_type" id="primary_type" value="email">
+            <div id="sib_loading_gif_area" style="position: absolute;z-index: 9999;display: none;">
+                <img src="https://my.sendinblue.com/public/theme/version4/assets/images/loader_sblue.gif" style="display: block;margin-left: auto;margin-right: auto;position: relative;top: 40%;">
+            </div>
+            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/37v37/id/1" onsubmit="return false;">
+              <input type="hidden" name="js_id" id="js_id" value="37v37">
+              <input type="hidden" name="listid" id="listid" value="2">
+              <input type="hidden" name="from_url" id="from_url" value="yes">
+              <input type="hidden" name="hdn_email_txt" id="hdn_email_txt" value="">
+              <div class="sib-container rounded">
+                <input type="hidden" name="req_hid" id="req_hid" value="" style="font-size: 13px;">
+                <div class="view-messages" style=" margin:5px 0;"> </div> <!-- an email as primary -->
+                <div class="primary-group email-group forms-builder-group ui-sortable">
+                  <div class="row mandatory-email" style="margin: auto 0">
+                    <div class="lbl-tinyltr mb-3" style="clear: both; float: none;">Enter your email address to subscribe. <red style="color:#ff0000;">*</red></div>
+                    <!--<input type="text" name="email" id="email" value="" style="padding: 10px 2%; width: 90%; min-width: auto;">-->
+                    <input type="text" name="email" id="email" value="" class="form-control form-control-border" placeholder="your@email.com">
+                    <div style="clear:both;"></div>
+                  </div>
+                </div>
+                <div class="byline mt-4">
+                  <button class="btn btn-fill" type="submit" data-editfield="subscribe" >Subscribe</button>
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-fill">GET UPDATES</button>
-      </div>
+      <!--<div class="modal-footer byline">
+        <button type="submit" data-editfield="subscribe" class="btn btn-fill button editable">GET UPDATES</button>
+      </div>-->
     </div>
   </div>
-</div>
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
@@ -827,6 +917,84 @@
     });
   });
 </script>
+<script>
+  function requestPreview()
+        {
+          // var g1 = "";
+          var g2 = document.getElementById("request-email").value;
+          // var letters = /^[A-Za-z]+$/;
+          var mailformat = /^([a-zA-Z0-9])([a-zA-Z0-9\._-])*@(([a-zA-Z])+(\.))+([a-zA-Z]{2,4})+$/ ;
+          // document.getElementById("errormsg1").style.visibility = 'hidden';
+          // document.getElementById("successmsg1").style.visibility = 'hidden';
+          if (g2 == "")
+          {
+            // document.getElementById("errormsg1").style.visibility = 'visible';
+            // document.getElementById("successmsg1").style.visibility = 'hidden';
+            // document.getElementById("errormsg1").innerHTML  = 'Please enter your email id';
+          }  
+            else if(!g2.match(mailformat))
+            {
+                // document.getElementById("errormsg1").style.visibility = 'visible';
+                // document.getElementById("errormsg1").innerHTML  = 'Please enter a valid email id';
+            }
+            else
+            {
+
+                    // var xhr = new XMLHttpRequest();
+                    // var url = "http://a1.nexusmutual.io/api/proposal/addemailUser";
+                    // xhr.open("POST", url, true);
+                    // xhr.setRequestHeader("Content-type", "application/json");
+                    // var data = JSON.stringify({
+                    // // "Per_FName" : g1,
+                    // "emailid" : g2 });
+                    // xhr.send(data);
+                    // console.log(xhr.status);
+                    // console.log(xhr.statusText);
+                    sendPreviewMail();
+                    // $('#thankYouModal').modal('show');
+            }
+        }
+        function sendPreviewMail()
+        {
+
+            // var g1 ="";
+            var g2 = document.getElementById("request-email").value;
+            fetch('http://a1.nexusmutual.io/api/proposal/addemailUser',
+            {
+                method: 'post',
+                headers: {
+                            'Accept': 'application/json, text/plain, */*',
+                            'Content-Type': 'application/json'
+                        },
+                body: JSON.stringify({emailid: g2}),
+
+            }).then(res=>res.json());
+            // .then(res => checkResponse(res));
+        }
+
+        function checkResponse(res)
+        {   
+            if (res == "1")
+            {   
+                // document.getElementById("errormsg1").style.visibility = 'hidden';
+                // document.getElementById("successmsg1").style.visibility = 'visible';
+                // document.getElementById("successmsg1").innerHTML  = "Thanks! You'll hear from us shortly.";
+                // document.getElementById("request-email").value="";
+            }                
+            else
+            {
+              // document.getElementById("successmsg1").style.visibility = 'hidden';
+              // document.getElementById("errormsg1").style.visibility = 'visible';
+              // document.getElementById("errormsg1").innerHTML  = 'Oops! Something went wrong with the request. Please try again!';        
+              //  document.getElementById("request-email").value="";
+            }  
+        }
+</script>
+
+
+<script type="text/javascript"> var sib_prefix = 'sib'; var sib_dateformat = 'dd-mm-yyyy'; </script>
+<script type='text/javascript' src='https://my.sendinblue.com/public/theme/version4/assets/js/src/subscribe-validate.js?v=1523869843'></script>
+
 </body>
 </html>
 

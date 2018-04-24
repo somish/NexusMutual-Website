@@ -524,6 +524,27 @@ color: #ffffff;
   }
 }
 
+.message_area{padding: 0.5rem;}
+/*.message_area .close{padding-left: 0.5rem;}*/
+.needsfilled input {border: 1px solid #a94442;}
+.message_area
+{
+  margin-top: 0 !important;
+  margin-bottom: 1rem;
+  background-color: transparent !important;
+  border: none !important;
+  color: #1eab89 !important;
+}
+.needsfilled .message_area
+{
+  color: #a94442 !important;
+}
+.modal .needsfilled .message_area
+{
+  margin-bottom: 0rem !important;
+}
+.message_area .close{display: none !important;}
+
 
 
 /*-----------Tabs-------------------*/
