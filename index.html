@@ -685,7 +685,7 @@
             <div id="sib_loading_gif_area" style="position: absolute;z-index: 9999;display: none;">
                 <img src="https://my.sendinblue.com/public/theme/version4/assets/images/loader_sblue.gif" style="display: block;margin-left: auto;margin-right: auto;position: relative;top: 40%;">
             </div>
-            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/37v37/id/1" onsubmit="return false;">
+            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/38015/id/1" onsubmit="return false;">
               <input type="hidden" name="js_id" id="js_id" value="37v37">
               <input type="hidden" name="listid" id="listid" value="2">
               <input type="hidden" name="from_url" id="from_url" value="yes">
@@ -723,7 +723,7 @@
             <div id="sib_loading_gif_area" style="position: absolute;z-index: 9999;display: none;">
                 <img src="https://my.sendinblue.com/public/theme/version4/assets/images/loader_sblue.gif" style="display: block;margin-left: auto;margin-right: auto;position: relative;top: 40%;">
             </div>
-            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/37v37/id/1" onsubmit="return false;">
+            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/38015/id/1" onsubmit="return false;">
               <input type="hidden" name="js_id" id="js_id" value="37v37">
               <input type="hidden" name="listid" id="listid" value="2">
               <input type="hidden" name="from_url" id="from_url" value="yes">
@@ -803,7 +803,7 @@
             <div id="sib_loading_gif_area" style="position: absolute;z-index: 9999;display: none;">
                 <img src="https://my.sendinblue.com/public/theme/version4/assets/images/loader_sblue.gif" style="display: block;margin-left: auto;margin-right: auto;position: relative;top: 40%;">
             </div>
-            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/37v37/id/1" onsubmit="return false;">
+            <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/38015/id/1" onsubmit="return false;">
               <input type="hidden" name="js_id" id="js_id" value="37v37">
               <input type="hidden" name="listid" id="listid" value="2">
               <input type="hidden" name="from_url" id="from_url" value="yes">
@@ -917,81 +917,6 @@
     });
   });
 </script>
-<script>
-  function requestPreview()
-        {
-          // var g1 = "";
-          var g2 = document.getElementById("request-email").value;
-          // var letters = /^[A-Za-z]+$/;
-          var mailformat = /^([a-zA-Z0-9])([a-zA-Z0-9\._-])*@(([a-zA-Z])+(\.))+([a-zA-Z]{2,4})+$/ ;
-          // document.getElementById("errormsg1").style.visibility = 'hidden';
-          // document.getElementById("successmsg1").style.visibility = 'hidden';
-          if (g2 == "")
-          {
-            // document.getElementById("errormsg1").style.visibility = 'visible';
-            // document.getElementById("successmsg1").style.visibility = 'hidden';
-            // document.getElementById("errormsg1").innerHTML  = 'Please enter your email id';
-          }  
-            else if(!g2.match(mailformat))
-            {
-                // document.getElementById("errormsg1").style.visibility = 'visible';
-                // document.getElementById("errormsg1").innerHTML  = 'Please enter a valid email id';
-            }
-            else
-            {
-
-                    // var xhr = new XMLHttpRequest();
-                    // var url = "http://a1.nexusmutual.io/api/proposal/addemailUser";
-                    // xhr.open("POST", url, true);
-                    // xhr.setRequestHeader("Content-type", "application/json");
-                    // var data = JSON.stringify({
-                    // // "Per_FName" : g1,
-                    // "emailid" : g2 });
-                    // xhr.send(data);
-                    // console.log(xhr.status);
-                    // console.log(xhr.statusText);
-                    sendPreviewMail();
-                    // $('#thankYouModal').modal('show');
-            }
-        }
-        function sendPreviewMail()
-        {
-
-            // var g1 ="";
-            var g2 = document.getElementById("request-email").value;
-            fetch('http://a1.nexusmutual.io/api/proposal/addemailUser',
-            {
-                method: 'post',
-                headers: {
-                            'Accept': 'application/json, text/plain, */*',
-                            'Content-Type': 'application/json'
-                        },
-                body: JSON.stringify({emailid: g2}),
-
-            }).then(res=>res.json());
-            // .then(res => checkResponse(res));
-        }
-
-        function checkResponse(res)
-        {   
-            if (res == "1")
-            {   
-                // document.getElementById("errormsg1").style.visibility = 'hidden';
-                // document.getElementById("successmsg1").style.visibility = 'visible';
-                // document.getElementById("successmsg1").innerHTML  = "Thanks! You'll hear from us shortly.";
-                // document.getElementById("request-email").value="";
-            }                
-            else
-            {
-              // document.getElementById("successmsg1").style.visibility = 'hidden';
-              // document.getElementById("errormsg1").style.visibility = 'visible';
-              // document.getElementById("errormsg1").innerHTML  = 'Oops! Something went wrong with the request. Please try again!';        
-              //  document.getElementById("request-email").value="";
-            }  
-        }
-</script>
-
-
 <script type="text/javascript"> var sib_prefix = 'sib'; var sib_dateformat = 'dd-mm-yyyy'; </script>
 <script type='text/javascript' src='https://my.sendinblue.com/public/theme/version4/assets/js/src/subscribe-validate.js?v=1523869843'></script>
 
