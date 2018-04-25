@@ -285,25 +285,26 @@
         <div class="top-span-bar-4px"></div>
         <!-- <img style="width: 100%" src="assets/img/code.jpg"> -->
         <pre class="code">
-          function measure() {
-        var scrollTop = $window.scrollTop()
-        var distance =  Math.max(scrollTop - cache.containerTop, 0)
-        if (!distance) {
-          $($toc.find('li a')[1]).addClass('active')
-          return $toc.css({
-            position: '',
-            left: '',
-            top: ''
-          })
-        }
-        $toc.css({
-          position: 'fixed',
-          left: cache.containerRight,
-          top: 0
-        })
-      }
+          struct cover
+            {
+                bytes8 productName;
+                address memberAddress;
+                bytes4 currencyCode;
+                uint sumAssured;
+                uint16 coverPeriod;
+                uint validUntil;
+                address scAddress;
+            }
 
-      updateCache()
+          struct Product_Details
+            {
+                bytes8 productName;
+                string productHash;
+                uint16 STLP;
+                uint16 STL;
+                uint16 PM;
+                uint16 minDays;
+            }
       </pre>
       <div class="row mt-4 app-align-center">
         <div class="col-md-3">
@@ -331,25 +332,26 @@
           <div class="col-md-6">
             <div class="top-span-bar-4px"></div>
             <pre class="code">
-              function measure() {
-              var scrollTop = $window.scrollTop()
-              var distance =  Math.max(scrollTop - cache.containerTop, 0)
-              if (!distance) {
-                $($toc.find('li a')[1]).addClass('active')
-                return $toc.css({
-                  position: '',
-                  left: '',
-                  top: ''
-                })
-              }
-              $toc.css({
-                position: 'fixed',
-                left: cache.containerRight,
-                top: 0
-              })
-            }
+              struct cover
+                {
+                    bytes8 productName;
+                    address memberAddress;
+                    bytes4 currencyCode;
+                    uint sumAssured;
+                    uint16 coverPeriod;
+                    uint validUntil;
+                    address scAddress;
+                }
 
-            updateCache()
+              struct Product_Details
+                {
+                    bytes8 productName;
+                    string productHash;
+                    uint16 STLP;
+                    uint16 STL;
+                    uint16 PM;
+                    uint16 minDays;
+                }
             </pre>
           </div>
         </div>
