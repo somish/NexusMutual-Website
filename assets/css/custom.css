@@ -309,6 +309,22 @@ color: #ffffff;
 {
   background-image: url("../img/james.jpg"), linear-gradient(#56bfa6, #56bfa6);
 }
+.team-charlie
+{
+  background-image: url("../img/charlie.jpg");
+}
+.team-charlie:hover, .active .team-charlie
+{
+  background-image: url("../img/charlie.jpg"), linear-gradient(#56bfa6, #56bfa6);
+}
+.team-rei
+{
+  background-image: url("../img/rei.jpg");
+}
+.team-rei:hover, .active .team-rei
+{
+  background-image: url("../img/rei.jpg"), linear-gradient(#56bfa6, #56bfa6);
+}
 .team-steve
 {
   background-image: url("../img/steve.jpg");
