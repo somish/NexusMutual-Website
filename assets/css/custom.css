@@ -646,7 +646,7 @@ color: #ffffff;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
-nav ul li .nav-link::after
+#nav-top nav ul li .nav-link::after
 {
   content: "";
   margin-top: 0.5rem;
@@ -657,13 +657,17 @@ nav ul li .nav-link::after
   width: 0%;
   transition: width 1s ease; 
 }
-nav ul li .active.nav-link::after
+#nav-top nav ul li .active.nav-link::after
 {
   width: 100%;
 }
-nav ul li .nav-link:hover::after
+#nav-top nav ul li .nav-link:hover::after
 {
   width: 100%;
+}
+.nav-bordered > .nav-item > .nav-link
+{
+  border-bottom: 0px solid transparent;
 }
 /*---------------------------------*/
 
