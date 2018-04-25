@@ -207,8 +207,9 @@ color: #ffffff;
 .btn
 {
   font-family: 'IBM Plex Mono', monospace;
-  padding: 0.5rem 1rem;
-  transition: all 1s;
+  /*padding: 0.5rem 1rem;*/
+  padding: 0.6rem 2rem;
+  transition: all 0.5s;
 }
 .btn:hover{
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
@@ -356,6 +357,11 @@ color: #ffffff;
   height: 32px;
   background-size: 32px 32px;
   display: block;
+  transition: all 0.5s;
+}
+.team-icon:hover{
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
 .team-github
 {
@@ -375,6 +381,11 @@ color: #ffffff;
   height: 42px;
   background-size: 42px 42px;
   display: block;
+  transition: all 0.5s;
+}
+.dark-icon:hover{
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
 .icon-github-dark
 {
@@ -694,6 +705,10 @@ color: #ffffff;
   {
     display: block !important;
   }
+  .xs-d-inline-block
+  {
+    display: inline-block !important;
+  }
   .xs-text-center
   {
     text-align: center !important;
@@ -765,6 +780,10 @@ color: #ffffff;
   .sm-d-block
   {
     display: block !important;
+  }
+  .sm-d-inline-block
+  {
+    display: inline-block !important;
   }
   .sm-d-none
   {
