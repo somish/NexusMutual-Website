@@ -276,6 +276,7 @@ color: #ffffff;
   border-radius: 50%;
   background-blend-mode: multiply;
   background-size: 160px 160px;
+  margin: 0 auto;
 }
 .team-hugh
 {
@@ -629,10 +630,6 @@ color: #ffffff;
 {
   background-color: #1eab89;
 }
-.active .circle
-{
-  /*border-bottom: 4px solid #1eab89 !important;*/
-}
 .slider-full {
     position: absolute;
     display:block;
@@ -841,6 +838,11 @@ color: #ffffff;
 }
 @media (min-width: 768px) and (max-width: 1024px)
 {
+  .team-img {
+    width: 135px;
+    height: 135px;
+    background-size: 135px 135px;
+}
   .block
   {
     padding: 50px 15px;
