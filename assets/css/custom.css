@@ -132,6 +132,10 @@ color: #ffffff;
 .btn-nav:hover{
   color: #1eab89;
 }
+a.btn.btn-fill:hover
+{
+  color: white !important;
+}
 .stage-shelf ul li a
 {
   text-align: center !important;
