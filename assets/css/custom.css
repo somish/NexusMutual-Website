@@ -136,6 +136,10 @@ a.btn.btn-fill:hover
 {
   color: white !important;
 }
+a:hover
+{
+  text-decoration: none;
+}
 .stage-shelf ul li a
 {
   text-align: center !important;
