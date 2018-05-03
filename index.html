@@ -59,7 +59,7 @@
 
 <body>
   
-<a id="onTop" onclick="topFunction()" href="#stage" class="text-center" role="button" title="Go to top"><span class="icon icon-chevron-up"></span></a>
+<!--<a id="onTop" onclick="topFunction()" href="#stage" class="text-center" role="button" title="Go to top"><span class="icon icon-chevron-up"></span></a>-->
 
 
 <div class="stage-shelf stage-shelf-right hidden" id="sidebar">
@@ -290,10 +290,10 @@
           </div>
           <div class="col-xl-12 col-lg-6 col-md-6 md-text-center">
             <div class="row mt-4 md-mt-0 app-align-center">
-              <div class="col-xl-2 col-12-2 col-md-12">
+              <div class="col-xl-2 col-lg-3 col-md-12">
                 <img class="team-hugh">
               </div>
-              <div class="col-xl-10 col-lg-12 col-md-12">
+              <div class="col-xl-10 col-lg-9 col-md-12">
                 <h2 class="mb-3 pt-xs-1 sm-pt-1 md-pt-1" style="opacity: 0.6;">HUGH KARP | FOUNDER &amp; INSURANCE PROFESSIONAL</h2>
                 <h1>Introducing Nexus Mutual at EthCC</h1>
               </div>
@@ -301,8 +301,10 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-5 col-lg-5 xs-pt-50 sm-pt-50 md-d-none">
+      <div class="col-xl-5 col-lg-12 xs-pt-50 sm-pt-50 cmt-3 md-d-none">
         <a href="https://github.com/somish/NexusMutual" target="_blank">
+        <div class="row app-align-center">
+        <div class="col-xl-12 col-lg-6 order-lg-last order-xl-first">
         <div class="top-span-bar-4px"></div>
         <!-- <img style="width: 100%" src="assets/img/code.jpg"> -->
         <pre class="code">
@@ -327,6 +329,8 @@
                 uint16 minDays;
             }
       </pre>
+      </div>
+      <div class="col-xl-12 col-lg-6">
       <div class="row mt-4 app-align-center">
         <div class="col-md-3">
           <img class="team-ish">
@@ -336,6 +340,8 @@
           <h1>See our code on Github</h1>
         </div>
       </div>
+      </div>
+      </div>
         </a>
       </div>
       <div class="col-md-12 d-none md-d-block md-pt-50">
@@ -343,10 +349,10 @@
         <div class="row app-align-center">
           <div class="col-md-6 md-text-center">
             <div class="row app-align-center">
-              <div class="col-md-12">
+              <div class="col-lg-3 col-md-12">
                 <img class="team-ish">
               </div>
-              <div class="col-md-12">
+              <div class="col-lg-9 col-md-12">
                 <h2 class="mb-3 md-pt-1" style="opacity: 0.6;">ISH GOEL | CTO</h2>
                 <h1>See our code on Github</h1>
               </div>
@@ -930,26 +936,18 @@
   swipe: 30
 });
 </script>
-<script>
+<!--<script>
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      // document.getElementById("onTop").style.display = "block";
       $("#onTop").fadeIn();
     }
     else
     {
-      // document.getElementById("onTop").style.display = "none";
       $("#onTop").fadeOut();
     }
   }
-
-  // When the user clicks on the button, scroll to the top of the document
-  // function topFunction() {
-  //     document.body.scrollTop = 0;
-  //     document.documentElement.scrollTop = 0;
-  // }
-</script>
+</script>-->
 <script>
   $(document).ready(function(){
     $('ul li a').click(function(){
@@ -958,7 +956,7 @@
     });
   });
 </script>
-<script>
+<!--<script>
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 && $(window).width() > 1024) {
@@ -971,8 +969,8 @@
       $("#nav-top").removeClass("after-scroll");
     }
   }
-</script>
-<script>
+</script>-->
+<!--<script>
   var sections = $('.section')
   , nav = $('#nav-top')
   , nav_height = nav.outerHeight();
@@ -990,7 +988,7 @@
       }
     });
   });
-</script>
+</script>-->
 <script type="text/javascript"> var sib_prefix = 'sib'; var sib_dateformat = 'dd-mm-yyyy'; </script>
 <script type='text/javascript' src='https://my.sendinblue.com/public/theme/version4/assets/js/src/subscribe-validate.js?v=1523869843'></script>
 

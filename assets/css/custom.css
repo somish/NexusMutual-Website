@@ -485,7 +485,7 @@ a:hover
   margin-bottom: 0px;
   background-blend-mode: multiply;
   background-color: black;
-  height: calc(100% - 84px - 1.5rem);
+  height: calc(100%);
   -webkit-user-select: none;  
   -moz-user-select: none;    
   -ms-user-select: none;      
@@ -854,10 +854,10 @@ a:hover
     height: 135px;
     background-size: 135px 135px;
 }
-  .block
+  /*.block
   {
-    padding: 50px 15px;
-  }
+    padding: 75px 15px;
+  }*/
   .md-d-none
   {
     display: none !important;
@@ -915,6 +915,29 @@ a:hover
   .block-fill-height
   {
     height: 75vh;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1199px)
+{
+  .cmt-3
+  {
+    margin-top: 3rem;
+  }
+  .team-img {
+      width: 140px;
+      height: 140px;
+      background-size: 140px 140px;
+  }
+}
+@media (min-width: 1200px)
+{
+  .video-section
+  {
+    padding-bottom: 150px;
+  }
+  #technology
+  {
+    padding-top: 150px;
   }
 }
 
