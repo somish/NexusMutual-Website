@@ -53,6 +53,16 @@
         }
       }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112311489-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112311489-1');
+  </script>
+
 
   </head>
 
@@ -776,7 +786,7 @@
                 <div class="primary-group email-group forms-builder-group ui-sortable">
                   <div class="row mandatory-email form-inline d-flex" style="margin: auto 0">
                     <input type="text" name="email" id="email" value="" class="form-control form-control-border mb-3" placeholder="your@email.com">
-                    <button class="btn btn-fill mb-3 mx-2 md-mx-0" type="submit" data-editfield="subscribe" >Subscribe</button>
+                    <button class="btn btn-fill mb-3 mx-2 md-mx-0" type="submit" data-editfield="subscribe" onclick="ga('send', 'event', 'newsletter', 'subscribe', 'footer');">Subscribe</button>
                   </div>
                 </div>
               </div>
@@ -814,7 +824,7 @@
                 <div class="primary-group email-group forms-builder-group ui-sortable">
                   <div class="row mandatory-email form-inline d-flex xs-d-block" style="margin: auto 0">
                     <input type="text" name="email" id="email" value="" class="form-control form-control-border mb-3" placeholder="your@email.com">
-                    <button class="btn btn-fill mb-3" type="submit" data-editfield="subscribe" >Subscribe</button>
+                    <button class="btn btn-fill mb-3" type="submit" data-editfield="subscribe" onclick="ga('send', 'event', 'newsletter', 'subscribe', 'footer');">Subscribe</button>
                   </div>
                 </div>
               </div>
@@ -902,7 +912,7 @@
                   </div>
                 </div>
                 <div class="byline mt-4">
-                  <button class="btn btn-fill" type="submit" data-editfield="subscribe" >Subscribe</button>
+                  <button class="btn btn-fill" type="submit" data-editfield="subscribe" onclick="ga('send', 'event', 'newsletter', 'subscribe', 'header');" >Subscribe</button>
                 </div>
                 <div style="clear:both;"></div>
               </div>
