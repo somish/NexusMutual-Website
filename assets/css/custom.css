@@ -59,9 +59,6 @@ h2 {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 13px;
   font-weight: 700;
-  /*font-weight: bold;*/
-  /*font-style: normal;*/
-  /*font-stretch: normal;*/
   line-height: normal;
   letter-spacing: normal;
   color: #2c332f;
@@ -76,6 +73,13 @@ h2 {
   line-height: normal;
   letter-spacing: normal;
   color: rgba(255, 255, 255, 0.8);
+}
+.graph-txt
+{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(31, 33, 36, 0.6);
 }
 body
 {
