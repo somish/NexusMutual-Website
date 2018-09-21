@@ -121,6 +121,9 @@ color: #ffffff;
 {
   border-bottom: solid 0px #1eab89;
 }
+.nav-bordered > .nav-item + .nav-item {
+  margin-left: 15px;
+}
 .btn-nav {
   padding: 0.5rem 2rem !important;
   border-radius: 2px;
