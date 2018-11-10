@@ -256,6 +256,71 @@ a:hover
   background-color: #ffffff;
   box-shadow: 4px 7px 20px 2px rgba(219, 219, 219, 0.13), 1px 2px 4px 0 rgba(200, 200, 200, 0.5);
 }
+.investor , .partner
+{
+  height: 155px;
+  padding: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.img-investor, .img-partner
+{
+  width: calc(100% - 100px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+.img-partner
+{
+  width: calc(100% - 80px);
+}
+.investor a, .partner a
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity: 0;
+  transition: all 0.3s;
+  color: #1eab89;
+}
+.investor:hover a, .partner:hover a
+{
+  transform: translate(-50%, 60%);
+  opacity: 1;
+}
+.investor:hover .img-investor
+{
+  transform: translate(-50%, -70%);
+}
+.partner:hover .img-partner
+{
+  transform: translate(-50%, -60%);
+}
+@media (max-width : 768px) and (min-width : 576px)
+{
+  .img-investor, .img-partner
+  {
+    width: calc(100% - 60px);
+  }
+}
+@media (max-width : 768px)
+{
+  .img-investor
+  {
+    width: calc(100% - 40px);
+  }
+  .img-partner
+  {
+    width: calc(100% - 50px);
+  }
+}
 .block-p-relative
 {
   top: -10vh;
@@ -267,6 +332,15 @@ a:hover
   line-height: 1.56;
   letter-spacing: normal;
   color: #2c332f;
+}
+.mailtoLink,.mailtoLink:hover
+{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+  letter-spacing: 3.4px !important;
 }
 .p-dark {
   opacity: 0.7;
@@ -433,6 +507,10 @@ a:hover
 .icon-medium-dark
 {
   background-image: url("../img/medium.svg");
+}
+.icon-discord-dark
+{
+  background-image: url("../img/discord.svg");
 }
 .form-control-border
 {
