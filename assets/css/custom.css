@@ -262,6 +262,11 @@ a:hover
   padding: 30px;
   margin-bottom: 30px;
   position: relative;
+  transition: all 0.3s;
+}
+.investor:hover, .partner:hover
+{
+  transform: translateY(-5px);
 }
 .img-investor, .img-partner
 {
@@ -279,29 +284,6 @@ a:hover
 .img-partner
 {
   width: calc(100% - 80px);
-}
-.investor a, .partner a
-{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  opacity: 0;
-  transition: all 0.3s;
-  color: #1eab89;
-}
-.investor:hover a, .partner:hover a
-{
-  transform: translate(-50%, 60%);
-  opacity: 1;
-}
-.investor:hover .img-investor
-{
-  transform: translate(-50%, -70%);
-}
-.partner:hover .img-partner
-{
-  transform: translate(-50%, -60%);
 }
 @media (max-width : 768px) and (min-width : 576px)
 {
