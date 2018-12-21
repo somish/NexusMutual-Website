@@ -837,6 +837,10 @@ video:-ms-media-controls-fullscreen-button
   {
     padding: 50px 15px;
   }
+  .block.app-header
+  {
+    padding: 100px 15px 50px 15px;
+  }
   .xs-d-none
   {
     display: none !important;
