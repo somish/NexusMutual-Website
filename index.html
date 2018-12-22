@@ -165,7 +165,8 @@
             <a class="btn btn-border-dark" href="https://discord.gg/pm35wJ6" target="_blank">JOIN THE CONVERSATION</a>
         </div>
         <div class="col-md-5">
-          <a id="fullscreenvid" data-target="#explainerVideoModal" data-toggle="modal">
+            <!-- id="fullscreenvid" -->
+          <a id="playVideo" data-target="#explainerVideoModal" data-toggle="modal">
             <div class="container-explainerVideo">
               <div class="playBtn"></div>
               <p class="title">Watch the video to learn how it works</p>
@@ -1012,9 +1013,10 @@
       <button id="closeModal" style="color: white;opacity: 1;font-size: 2rem;position: fixed;right: 2%;top: 0;z-index: 999;" type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-      <video  style="width: 100%; height: calc(100vh - 3.5rem);" controls controlsList="nodownload">
+      <iframe id="video" src="https://player.vimeo.com/video/307817202?api=1" style="width: 100%; height: calc(100vh - 3.5rem);" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <!-- <video  style="width: 100%; height: calc(100vh - 3.5rem);" controls controlsList="nodownload">
         <source src="./assets/video/NexusMutual_26.mp4" type="video/mp4"> 
-      </video>
+      </video> -->
       </div>
   </div>
 </div>
@@ -1129,6 +1131,20 @@
 				// video[fullscreenvideo]();
       }, false);
 		})(this, this.document);
+</script>
+<script src="./assets/js/froogaloop.js"></script>
+<script>
+  var iframe = document.getElementById('video');
+  var player = $f(iframe);
+  var playButton = document.getElementById("playVideo");
+  playButton.addEventListener("click", function() {
+    player.api("play");
+  });
+
+  var pauseButton = document.getElementById("closeModal");
+  pauseButton.addEventListener("click", function() {
+    player.api("pause");
+  });
 </script>
 </body>
 </html>
