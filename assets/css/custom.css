@@ -417,30 +417,24 @@ video:-ms-media-controls-fullscreen-button
 {
   background-image: url("../img/nitika.jpg"), linear-gradient(#56bfa6, #56bfa6);
 }
-.team-james
+
+.team-graeme
 {
-  background-image: url("../img/james.jpg");
+  background-image: url("../img/graeme.jpg");
 }
-.team-james:hover, .active .team-james
+.team-graeme:hover, .active .team-graeme
 {
-  background-image: url("../img/james.jpg"), linear-gradient(#56bfa6, #56bfa6);
+  background-image: url("../img/graeme.jpg"), linear-gradient(#56bfa6, #56bfa6);
 }
-.team-charlie
+.team-nick
 {
-  background-image: url("../img/charlie.jpg");
+  background-image: url("../img/nick.jpg");
 }
-.team-charlie:hover, .active .team-charlie
+.team-nick:hover, .active .team-nick
 {
-  background-image: url("../img/charlie.jpg"), linear-gradient(#56bfa6, #56bfa6);
+  background-image: url("../img/nick.jpg"), linear-gradient(#56bfa6, #56bfa6);
 }
-.team-rei
-{
-  background-image: url("../img/rei.jpg");
-}
-.team-rei:hover, .active .team-rei
-{
-  background-image: url("../img/rei.jpg"), linear-gradient(#56bfa6, #56bfa6);
-}
+
 .team-kayleigh
 {
   background-image: url("../img/kayleigh.jpg");
