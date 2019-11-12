@@ -401,6 +401,14 @@ video:-ms-media-controls-fullscreen-button
 {
   background-image: url("../img/hugh.jpg"), linear-gradient(#56bfa6, #56bfa6);
 }
+.team-rox
+{
+  background-image: url("../img/rox.jpg");
+}
+.team-rox:hover, .active .team-rox
+{
+  background-image: url("../img/rox.jpg"), linear-gradient(#56bfa6, #56bfa6);
+}
 .team-ish
 {
   background-image: url("../img/ish.jpg");
@@ -596,9 +604,9 @@ video:-ms-media-controls-fullscreen-button
   background-blend-mode: multiply;
   background-color: black;
   height: calc(100%);
-  -webkit-user-select: none;  
-  -moz-user-select: none;    
-  -ms-user-select: none;      
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   text-align: left !important;
 }
@@ -611,9 +619,9 @@ video:-ms-media-controls-fullscreen-button
   background-blend-mode: multiply;
   background-size: 80px 80px;
 }
-.video-section .team-ish
+.video-section .team-github-logo
 {
-  background-image: url("../img/ish.jpg"), linear-gradient(#56bfa6, #56bfa6);
+  background-image: url("../img/github-logo.png"), linear-gradient(#56bfa6, #56bfa6);
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -800,7 +808,7 @@ video:-ms-media-controls-fullscreen-button
   height: 2px;
   background-color: #1eab89;
   width: 0%;
-  transition: width 1s ease; 
+  transition: width 1s ease;
 }
 #nav-top nav ul li .active.nav-link::after
 {
@@ -898,7 +906,7 @@ video:-ms-media-controls-fullscreen-button
 }
 }
 @media screen and (min-width: 576px) and (max-width: 767px)
-{ 
+{
   .sm-text-left
   {
     text-align: left;
